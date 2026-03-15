@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, GraduationCap, Code2, Gamepad2, Heart } from 'lucide-react';
+import { X } from 'lucide-react';
 
 const Home: React.FC = () => {
     const [isAboutOpen, setIsAboutOpen] = React.useState(false);
@@ -73,8 +73,7 @@ const Home: React.FC = () => {
                             {/* Modal Content */}
                             <div className="p-8 overflow-y-auto space-y-8">
                                 <section className="text-center">
-                                    <div className="flex items-center justify-center gap-3 mb-4 text-black">
-                                        <GraduationCap size={24} />
+                                    <div className="mb-4 text-black">
                                         <h3 className="text-xl font-bold">Education</h3>
                                     </div>
                                     <p className="text-gray-600 leading-relaxed">
@@ -83,10 +82,9 @@ const Home: React.FC = () => {
                                     </p>
                                 </section>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
                                     <section>
-                                        <div className="flex items-center gap-3 mb-4 text-black">
-                                            <Code2 size={24} />
+                                        <div className="mb-4 text-black">
                                             <h3 className="text-xl font-bold">Web Development</h3>
                                         </div>
                                         <p className="text-gray-600 text-sm leading-relaxed">
@@ -94,8 +92,7 @@ const Home: React.FC = () => {
                                         </p>
                                     </section>
                                     <section>
-                                        <div className="flex items-center gap-3 mb-4 text-black">
-                                            <Gamepad2 size={24} />
+                                        <div className="mb-4 text-black">
                                             <h3 className="text-xl font-bold">Game Development</h3>
                                         </div>
                                         <p className="text-gray-600 text-sm leading-relaxed">
@@ -105,12 +102,11 @@ const Home: React.FC = () => {
                                 </div>
 
                                 <section className="p-6 bg-gray-50 rounded-2xl border border-black/5 text-center">
-                                    <div className="flex items-center justify-center gap-3 mb-4 text-black">
-                                        <Heart size={24} />
+                                    <div className="mb-4 text-black">
                                         <h3 className="text-xl font-bold">Interests</h3>
                                     </div>
                                     <div className="flex flex-wrap justify-center gap-2">
-                                        {['Open Source', 'UI Design', 'AI Engineering', 'Game Jams', 'Photography'].map((item) => (
+                                        {['Open Source', 'UI/UX Design', 'AI', 'Game Jams', 'Coding'].map((item) => (
                                             <span key={item} className="px-4 py-1.5 border border-black/10 rounded-full text-xs font-semibold text-black bg-white">
                                                 {item}
                                             </span>

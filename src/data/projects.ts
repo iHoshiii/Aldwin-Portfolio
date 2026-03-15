@@ -61,11 +61,19 @@ export const projects: Project[] = [
         category: "Game Development",
         description: "A modernized 3D reimagining of the classic arcade game featuring dynamic camera angles.",
         fullDescription: "PacMad brings the iconic Pacman gameplay into a fully 3D environment. Rebuilt with Unity, it features precise grid movement, classic AI behaviors perfectly mapped to 3D space, and an atmospheric visual style.",
-        image: "https://preview.redd.it/pacman-3d-rendered-in-an-isometric-perspective-v0-v9ofjytnd5ba1.jpg?width=1024&format=pjpg&auto=webp&s=ef9e0487052a65aa21aadb9c24ce62534f5aaebb",
+        image: "/images/PacMad/BGImage.jpg",
         link: "#",
-        githubLink: "#",
+        githubLink: "https://www.facebook.com/share/v/1F1STNPZoL/",
         tech: ["Unity", "C#"],
         primaryLinkLabel: "Game Video",
-        secondaryLinkLabel: "Documentation"
+        secondaryLinkLabel: "Documentation",
+        gallery: [
+            "/images/PacMad/Doc5.jpg",
+            "/images/PacMad/Doc6.jpg",
+            "/images/PacMad/Doc1.jpg",
+            "/images/PacMad/Doc2.jpg",
+            "/images/PacMad/Doc3.jpg",
+            "/images/PacMad/Doc4.jpg"
+        ]
     }
 ];

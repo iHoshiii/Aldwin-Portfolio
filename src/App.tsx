@@ -8,7 +8,7 @@ import Contacts from './components/Contacts';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen transition-colors duration-300">
       <Navbar />
       <Home />
       <Credentials />

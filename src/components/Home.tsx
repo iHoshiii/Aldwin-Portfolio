@@ -21,23 +21,23 @@ const Home: React.FC = () => {
     ];
 
     return (
-        <header id="home" className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20 overflow-hidden">
+        <header id="home" className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20 overflow-hidden transition-colors duration-300">
             {/* Decorative Background Glow - Minimal Dark */}
-            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-black/5 rounded-full blur-[120px] -z-10"></div>
+            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-black/5 dark:bg-white/5 rounded-full blur-[120px] -z-10"></div>
 
             <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-5xl md:text-8xl font-bold font-outfit leading-[1.1] mb-6 max-w-5xl"
+                className="text-5xl md:text-8xl font-bold font-outfit leading-[1.1] mb-6 max-w-5xl text-black dark:text-white"
             >
-                Good <span className="text-black">Day</span> Everyone!
+                Good <span className="text-black/50 dark:text-white/50">Day</span> Everyone!
             </motion.h1>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-lg md:text-xl text-gray-600 max-w-2xl mb-10 leading-relaxed"
+                className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mb-10 leading-relaxed"
             >
                 Hi, I am Aldwin Bernard V. Loreto, a Computer Science student at Nueva Vizcaya State University. I spend most of my time building websites and making games, trying to create things that are actually useful and fun to use.
             </motion.p>
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
             >
                 <button
                     onClick={() => setIsAboutOpen(true)}
-                    className="px-10 py-4 bg-black text-white rounded-full font-semibold text-lg shadow-[0_10px_20px_-5px_rgba(0,0,0,0.2)] hover:shadow-[0_15px_30px_-5px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition-all duration-300"
+                    className="px-10 py-4 bg-black dark:bg-white text-white dark:text-black rounded-full font-semibold text-lg shadow-[0_10px_20px_-5px_rgba(0,0,0,0.2)] hover:shadow-[0_15px_30px_-5px_rgba(255,255,255,0.1)] hover:-translate-y-1 transition-all duration-300"
                 >
                     More About me
                 </button>
@@ -63,22 +63,22 @@ const Home: React.FC = () => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setIsAboutOpen(false)}
-                            className="absolute inset-0 bg-white/80 backdrop-blur-sm"
+                            className="absolute inset-0 bg-white/80 dark:bg-black/80 backdrop-blur-sm"
                         />
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9, y: 20 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                            className="relative w-full max-w-2xl bg-white border-2 border-black rounded-3xl shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] overflow-hidden flex flex-col max-h-[90vh]"
+                            className="relative w-full max-w-2xl bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] dark:shadow-[20px_20px_0px_0px_rgba(255,255,255,0.1)] overflow-hidden flex flex-col max-h-[90vh]"
                         >
                             {/* Modal Header */}
-                            <div className="p-6 border-b border-black/5 flex justify-between items-center bg-gray-50">
-                                <h2 className="text-2xl font-bold font-outfit text-black">About Aldwin</h2>
+                            <div className="p-6 border-b border-black/5 dark:border-white/5 flex justify-between items-center bg-gray-50 dark:bg-white/5">
+                                <h2 className="text-2xl font-bold font-outfit text-black dark:text-white">About Aldwin</h2>
                                 <button
                                     onClick={() => setIsAboutOpen(false)}
-                                    className="p-2 hover:bg-black hover:text-white rounded-full transition-colors"
+                                    className="p-2 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black rounded-full transition-colors"
                                 >
-                                    <X size={24} />
+                                    <X size={24} className="text-black dark:text-white hover:text-white dark:hover:text-black" />
                                 </button>
                             </div>
 
@@ -86,7 +86,7 @@ const Home: React.FC = () => {
                             <div className="p-8 overflow-y-auto space-y-12">
                                 {/* Philosophy Section */}
                                 <section className="text-center px-4">
-                                    <p className="text-gray-600 leading-relaxed text-lg italic">
+                                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg italic">
                                         "I believe in the power of simplicity. My approach to design and development is rooted in the 'Less is More',
                                         focusing on high-contrast aesthetics and greater user experience."
                                     </p>
@@ -94,44 +94,42 @@ const Home: React.FC = () => {
 
                                 {/* Skills & Meta Grid */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 text-center px-4">
-                                    {/* Web & Game Dev (First Row) */}
                                     <div className="space-y-4">
-                                        <h3 className="text-xl font-bold border-b-2 border-black/5 pb-2 inline-block">Web Development</h3>
+                                        <h3 className="text-xl font-bold border-b-2 border-black/5 dark:border-white/5 pb-2 inline-block text-black dark:text-white">Web Development</h3>
                                         <div className="flex flex-wrap justify-center gap-2">
                                             {categories[0].skills.map(skill => (
-                                                <span key={skill} className="px-4 py-1.5 border border-black/10 rounded-full text-xs font-semibold text-black bg-white">
+                                                <span key={skill} className="px-4 py-1.5 border border-black/10 dark:border-white/10 rounded-full text-xs font-semibold text-black dark:text-white bg-white dark:bg-white/5">
                                                     {skill}
                                                 </span>
                                             ))}
                                         </div>
                                     </div>
                                     <div className="space-y-4">
-                                        <h3 className="text-xl font-bold border-b-2 border-black/5 pb-2 inline-block">Game Development</h3>
+                                        <h3 className="text-xl font-bold border-b-2 border-black/5 dark:border-white/5 pb-2 inline-block text-black dark:text-white">Game Development</h3>
                                         <div className="flex flex-wrap justify-center gap-2">
                                             {categories[1].skills.map(skill => (
-                                                <span key={skill} className="px-4 py-1.5 border border-black/10 rounded-full text-xs font-semibold text-black bg-white">
+                                                <span key={skill} className="px-4 py-1.5 border border-black/10 dark:border-white/10 rounded-full text-xs font-semibold text-black dark:text-white bg-white dark:bg-white/5">
                                                     {skill}
                                                 </span>
                                             ))}
                                         </div>
                                     </div>
 
-                                    {/* Languages & Interests (Second Row) */}
                                     <div className="space-y-4">
-                                        <h3 className="text-xl font-bold border-b-2 border-black/5 pb-2 inline-block">Languages</h3>
+                                        <h3 className="text-xl font-bold border-b-2 border-black/5 dark:border-white/5 pb-2 inline-block text-black dark:text-white">Languages</h3>
                                         <div className="flex flex-wrap justify-center gap-2">
                                             {categories[2].skills.map(skill => (
-                                                <span key={skill} className="px-4 py-1.5 border border-black/10 rounded-full text-xs font-semibold text-black bg-white">
+                                                <span key={skill} className="px-4 py-1.5 border border-black/10 dark:border-white/10 rounded-full text-xs font-semibold text-black dark:text-white bg-white dark:bg-white/5">
                                                     {skill}
                                                 </span>
                                             ))}
                                         </div>
                                     </div>
                                     <div className="space-y-4">
-                                        <h3 className="text-xl font-bold border-b-2 border-black/5 pb-2 inline-block">Interests</h3>
+                                        <h3 className="text-xl font-bold border-b-2 border-black/5 dark:border-white/5 pb-2 inline-block text-black dark:text-white">Interests</h3>
                                         <div className="flex flex-wrap justify-center gap-2">
                                             {['Open Source', 'UI/UX Design', 'AI', 'Game Jams', 'Coding'].map((item) => (
-                                                <span key={item} className="px-4 py-1.5 border border-black/10 rounded-full text-xs font-semibold text-black bg-white">
+                                                <span key={item} className="px-4 py-1.5 border border-black/10 dark:border-white/10 rounded-full text-xs font-semibold text-black dark:text-white bg-white dark:bg-white/5">
                                                     {item}
                                                 </span>
                                             ))}

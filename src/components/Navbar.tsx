@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
                     ALD<span className="text-black">WIN.</span>
                 </div>
                 <ul className="hidden md:flex gap-10">
-                    {['Home', 'Projects', 'About', 'Contact'].map((item) => (
+                    {['Home', 'Background', 'Projects', 'Contacts'].map((item) => (
                         <li key={item}>
                             <a href={`#${item.toLowerCase()}`} className="text-sm font-medium text-gray-500 hover:text-black transition-colors">
                                 {item}

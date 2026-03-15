@@ -24,7 +24,6 @@ const Background: React.FC = () => {
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                         className="text-4xl md:text-5xl font-bold mb-12 font-outfit text-black text-center"
                     >
@@ -36,7 +35,6 @@ const Background: React.FC = () => {
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className="text-center"
                         >
@@ -53,7 +51,6 @@ const Background: React.FC = () => {
                                     key={category.title}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
                                     transition={{ duration: 0.6, delay: 0.3 + catIndex * 0.1 }}
                                     className="flex flex-col items-center"
                                 >
@@ -61,7 +58,7 @@ const Background: React.FC = () => {
                                         {category.title}
                                     </h3>
                                     <div className="flex flex-wrap justify-center gap-3">
-                                        {category.skills.map((skill, skillIndex) => (
+                                        {category.skills.map((skill) => (
                                             <motion.span
                                                 key={skill}
                                                 whileHover={{ scale: 1.05 }}

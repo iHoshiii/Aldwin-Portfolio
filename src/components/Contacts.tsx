@@ -8,7 +8,6 @@ const Contacts: React.FC = () => {
             <motion.h2
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
                 className="text-4xl md:text-5xl font-bold mb-12 font-outfit text-black"
             >
@@ -26,7 +25,6 @@ const Contacts: React.FC = () => {
                         key={i}
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
                         transition={{ duration: 0.4, delay: i * 0.1 }}
                         href={social.href}
                         className="w-14 h-14 flex justify-center items-center bg-gray-50 border border-black/5 rounded-full text-black hover:bg-black hover:text-white hover:border-black hover:-translate-y-2 transition-all duration-300"
@@ -38,7 +36,6 @@ const Contacts: React.FC = () => {
             <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
                 transition={{ duration: 1, delay: 0.5 }}
                 className="text-gray-500 text-sm font-medium"
             >

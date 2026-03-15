@@ -50,7 +50,7 @@ const Chatbot: React.FC = () => {
             {/* Toggle Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-16 h-16 bg-white text-black rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300"
+                className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300"
             >
                 {isOpen ? <X size={28} /> : <MessageSquare size={28} />}
             </button>
@@ -62,23 +62,23 @@ const Chatbot: React.FC = () => {
                         initial={{ opacity: 0, scale: 0.9, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                        className="absolute bottom-20 right-0 w-[350px] md:w-[400px] h-[500px] bg-black border border-white/20 rounded-3xl shadow-2xl flex flex-col overflow-hidden"
+                        className="absolute bottom-20 right-0 w-[350px] md:w-[400px] h-[500px] bg-white border border-black/10 rounded-3xl shadow-2xl flex flex-col overflow-hidden"
                     >
                         {/* Header */}
-                        <div className="p-6 border-b border-white/10 flex justify-between items-center bg-white/5">
+                        <div className="p-6 border-b border-black/5 flex justify-between items-center bg-gray-50">
                             <div>
-                                <h3 className="font-bold text-white">Chat with Aldwin AI</h3>
+                                <h3 className="font-bold text-black">Chat with Aldwin AI</h3>
                                 <p className="text-xs text-gray-500">Ask me anything about my work</p>
                             </div>
                         </div>
 
                         {/* Messages */}
-                        <div className="flex-grow overflow-y-auto p-6 space-y-4">
+                        <div className="flex-grow overflow-y-auto p-6 space-y-4 bg-white">
                             {messages.map((msg, i) => (
                                 <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                                     <div className={`max-w-[80%] p-4 rounded-2xl text-sm ${msg.role === 'user'
-                                        ? 'bg-white text-black rounded-tr-none'
-                                        : 'bg-white/10 text-white rounded-tl-none border border-white/10'
+                                        ? 'bg-black text-white rounded-tr-none'
+                                        : 'bg-gray-100 text-black rounded-tl-none border border-black/5'
                                         }`}>
                                         {msg.text}
                                     </div>
@@ -86,16 +86,16 @@ const Chatbot: React.FC = () => {
                             ))}
                             {isLoading && (
                                 <div className="flex justify-start">
-                                    <div className="bg-white/10 text-white p-4 rounded-2xl rounded-tl-none border border-white/10 italic text-sm flex items-center gap-2">
-                                        <Loader2 size={16} className="animate-spin" /> Thinking...
+                                    <div className="bg-gray-100 text-black p-4 rounded-2xl rounded-tl-none border border-black/5 italic text-sm flex items-center gap-2">
+                                        <Loader2 size={16} className="animate-spin text-black" /> Thinking...
                                     </div>
                                 </div>
                             )}
                             <div ref={messagesEndRef} />
                         </div>
 
-                        {/* Input */}
-                        <div className="p-4 border-t border-white/10 bg-white/5">
+                        {/* Input Area - White Textbox with Black Outlines */}
+                        <div className="p-4 border-t border-black/5 bg-white">
                             <div className="relative">
                                 <input
                                     type="text"
@@ -103,11 +103,11 @@ const Chatbot: React.FC = () => {
                                     onChange={(e) => setInput(e.target.value)}
                                     onKeyPress={(e) => e.key === 'Enter' && handleSend()}
                                     placeholder="Type a message..."
-                                    className="w-full bg-white/10 border border-white/20 rounded-full py-3 px-6 pr-12 text-sm focus:outline-none focus:border-white/40 transition-colors"
+                                    className="w-full bg-white border-2 border-black rounded-full py-3 px-6 pr-12 text-sm text-black placeholder:text-gray-400 focus:outline-none transition-colors"
                                 />
                                 <button
                                     onClick={handleSend}
-                                    className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center text-white hover:text-gray-400 transition-colors"
+                                    className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center text-black hover:text-gray-500 transition-colors"
                                 >
                                     <Send size={18} />
                                 </button>

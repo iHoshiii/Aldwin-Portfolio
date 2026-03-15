@@ -7,7 +7,7 @@ const Projects: React.FC = () => {
         <section id="projects" className="py-32 container mx-auto px-6">
             <div className="text-center mb-20">
                 <h2 className="text-4xl md:text-5xl font-bold mb-4 font-outfit">
-                    Selected <span className="text-white">Work</span>
+                    Selected <span className="text-black">Work</span>
                 </h2>
                 <p className="text-gray-400 text-lg">A collection of projects built with precision and passion.</p>
             </div>

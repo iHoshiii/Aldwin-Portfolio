@@ -8,7 +8,7 @@ const Home: React.FC = () => {
     const categories = [
         {
             title: 'Web Development',
-            skills: ['React', 'Next.js', 'Node.js', 'Supabase', 'Tailwind CSS', 'Html', 'Css', 'Javascript']
+            skills: ['React', 'Next.js', 'Node.js', 'Supabase', 'Tailwind CSS']
         },
         {
             title: 'Game Development',

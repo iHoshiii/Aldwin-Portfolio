@@ -72,13 +72,13 @@ const Home: React.FC = () => {
 
                             {/* Modal Content */}
                             <div className="p-8 overflow-y-auto space-y-8">
-                                <section>
-                                    <div className="flex items-center gap-3 mb-4 text-black">
+                                <section className="text-center">
+                                    <div className="flex items-center justify-center gap-3 mb-4 text-black">
                                         <GraduationCap size={24} />
                                         <h3 className="text-xl font-bold">Education</h3>
                                     </div>
                                     <p className="text-gray-600 leading-relaxed">
-                                        Currently pursuing a Bachelor of Science in Computer Science at **Nueva Vizcaya State University**.
+                                        Currently pursuing a Bachelor of Science in Computer Science at Nueva Vizcaya State University.
                                         My academic journey has shaped my logical thinking and provided a strong foundation in software engineering principles.
                                     </p>
                                 </section>
@@ -87,16 +87,16 @@ const Home: React.FC = () => {
                                     <section>
                                         <div className="flex items-center gap-3 mb-4 text-black">
                                             <Code2 size={24} />
-                                            <h3 className="text-xl font-bold">Web Dev</h3>
+                                            <h3 className="text-xl font-bold">Web Development</h3>
                                         </div>
                                         <p className="text-gray-600 text-sm leading-relaxed">
-                                            Passionate about creating modern web applications using React, TypeScript, and Tailwind CSS. I focus on clean code and pixel-perfect designs.
+                                            I am passionate about creating modern web applications using React, TypeScript, and Tailwind CSS.
                                         </p>
                                     </section>
                                     <section>
                                         <div className="flex items-center gap-3 mb-4 text-black">
                                             <Gamepad2 size={24} />
-                                            <h3 className="text-xl font-bold">Game Dev</h3>
+                                            <h3 className="text-xl font-bold">Game Development</h3>
                                         </div>
                                         <p className="text-gray-600 text-sm leading-relaxed">
                                             When I'm not coding for the web, I'm diving into game mechanics and interactive experiences, exploring the cross-section of art and logic.
@@ -104,12 +104,12 @@ const Home: React.FC = () => {
                                     </section>
                                 </div>
 
-                                <section className="p-6 bg-gray-50 rounded-2xl border border-black/5">
-                                    <div className="flex items-center gap-3 mb-4 text-black">
+                                <section className="p-6 bg-gray-50 rounded-2xl border border-black/5 text-center">
+                                    <div className="flex items-center justify-center gap-3 mb-4 text-black">
                                         <Heart size={24} />
                                         <h3 className="text-xl font-bold">Interests</h3>
                                     </div>
-                                    <div className="flex flex-wrap gap-2">
+                                    <div className="flex flex-wrap justify-center gap-2">
                                         {['Open Source', 'UI Design', 'AI Engineering', 'Game Jams', 'Photography'].map((item) => (
                                             <span key={item} className="px-4 py-1.5 border border-black/10 rounded-full text-xs font-semibold text-black bg-white">
                                                 {item}

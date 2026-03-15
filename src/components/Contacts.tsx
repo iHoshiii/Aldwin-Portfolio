@@ -16,10 +16,10 @@ const Contacts: React.FC = () => {
             <div className="flex justify-center gap-6 mb-12">
                 {[
                     { icon: Github, href: "https://github.com/iHoshiii" },
-                    { icon: Linkedin, href: "#" },
-                    { icon: Facebook, href: "#" },
-                    { icon: Instagram, href: "#" },
-                    { icon: Mail, href: "mailto:aldwinloreto690@gmail.com" }
+                    { icon: Linkedin, href: "https://www.linkedin.com/in/aldwin-loreto-16bb2430a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+                    { icon: Facebook, href: "https://www.facebook.com/aldwin.loreto" },
+                    { icon: Instagram, href: "https://www.instagram.com/hoshi.iee/" },
+                    { icon: Mail, href: "https://mail.google.com/mail/u/0/#sent?compose=DmwnWsdMVpLlqtRCrfprlhHrngmLKwDBwRbWQkRgVkSJFgGklmnNvwdQvmggQXQSTdZQlKCkgKqQ" }
                 ].map((social, i) => (
                     <motion.a
                         key={i}

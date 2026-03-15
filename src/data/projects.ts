@@ -37,6 +37,15 @@ export const projects: Project[] = [
         tech: ["React", "Node.js", "Chart.js"]
     },
     {
+        id: 7,
+        title: "Real-time Chat App",
+        category: "Web Development",
+        description: "Scalable chat application featuring instant messaging, rooms, and media sharing.",
+        image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80&w=800",
+        link: "#",
+        tech: ["Socket.io", "React", "Express"]
+    },
+    {
         id: 4,
         title: "Eternal Quest",
         category: "Game Development",
@@ -62,5 +71,23 @@ export const projects: Project[] = [
         image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=800",
         link: "#",
         tech: ["Unity", "C#", "Blender"]
+    },
+    {
+        id: 8,
+        title: "Pixel Odyssey",
+        category: "Game Development",
+        description: "Charming 2D platformer with vintage pixel art and challenging mechanics.",
+        image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800",
+        link: "#",
+        tech: ["Godot", "Aseprite"]
+    },
+    {
+        id: 9,
+        title: "Stellar Horizon",
+        category: "Game Development",
+        description: "Grand space strategy game featuring complex economy and fleet management.",
+        image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?auto=format&fit=crop&q=80&w=800",
+        link: "#",
+        tech: ["Unity", "C#", "HLSL"]
     }
 ];

@@ -41,7 +41,6 @@ const projects: Project[] = [
     category: "Mobile Design",
     description: "Intuitive personal finance management app featuring beautiful dark-mode charts.",
     image: "/images/project4.png",
-    image: "/images/project4.png",
     link: "#"
   },
   {

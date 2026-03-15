@@ -57,6 +57,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                                     {project.primaryLinkLabel === 'Game Video' ? <Play size={20} /> : <ExternalLink size={20} />}
                                 </a>
                             )}
+                            {project.tertiaryLink && (
+                                <a href={project.tertiaryLink} target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white transition-colors" title={project.tertiaryLinkLabel || 'Documentation'}>
+                                    {project.tertiaryLinkLabel === 'Documentation' || project.tertiaryLinkLabel === 'Game Paper' ? <FileText size={20} /> : <ExternalLink size={20} />}
+                                </a>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -161,6 +166,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                                                             <span className="flex items-center gap-3">
                                                                 {project.primaryLinkLabel === 'Game Video' ? <Play size={22} /> : <ExternalLink size={22} />}
                                                                 {project.primaryLinkLabel || 'Website Link'}
+                                                            </span>
+                                                            <ArrowRight size={20} className="group-hover/btn:translate-x-1 transition-transform" />
+                                                        </a>
+                                                    )}
+                                                    {project.tertiaryLink && (
+                                                        <a
+                                                            href={project.tertiaryLink}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="flex items-center justify-between group/btn px-8 py-4 border-2 border-black dark:border-white text-black dark:text-white rounded-2xl font-bold hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
+                                                        >
+                                                            <span className="flex items-center gap-3">
+                                                                {project.tertiaryLinkLabel === 'Documentation' || project.tertiaryLinkLabel === 'Game Paper' ? <FileText size={22} /> : <ExternalLink size={22} />}
+                                                                {project.tertiaryLinkLabel || 'Documentation'}
                                                             </span>
                                                             <ArrowRight size={20} className="group-hover/btn:translate-x-1 transition-transform" />
                                                         </a>

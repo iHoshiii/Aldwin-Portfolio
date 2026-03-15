@@ -11,6 +11,8 @@ export interface Project {
     gallery?: string[];
     primaryLinkLabel?: string;
     secondaryLinkLabel?: string;
+    tertiaryLink?: string;
+    tertiaryLinkLabel?: string;
 }
 
 export const projects: Project[] = [
@@ -46,6 +48,8 @@ export const projects: Project[] = [
         tech: ["Unity", "Unity Version Control", "C#", "Photoshop", "Blender"],
         primaryLinkLabel: "Game Video",
         secondaryLinkLabel: "Game Paper",
+        tertiaryLink: "https://www.facebook.com/share/v/1F1STNPZoL/",
+        tertiaryLinkLabel: "Documentation",
         gallery: [
             "/images/PacMad/Doc1.jpg",
             "/images/PacMad/Doc5.jpg",

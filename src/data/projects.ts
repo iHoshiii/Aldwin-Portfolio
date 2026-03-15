@@ -68,10 +68,10 @@ export const projects: Project[] = [
         primaryLinkLabel: "Game Video",
         secondaryLinkLabel: "Documentation",
         gallery: [
-            "/images/PacMad/Doc5.jpg",
-            "/images/PacMad/Doc6.jpg",
             "/images/PacMad/Doc1.jpg",
+            "/images/PacMad/Doc5.jpg",
             "/images/PacMad/Doc2.jpg",
+            "/images/PacMad/Doc6.jpg",
             "/images/PacMad/Doc3.jpg",
             "/images/PacMad/Doc4.jpg"
         ]

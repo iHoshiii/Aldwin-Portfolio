@@ -32,39 +32,6 @@ export const projects: Project[] = [
         ]
     },
     {
-        id: 4,
-        title: "Eternal Quest",
-        category: "Game Development",
-        description: "A 2D action RPG built with Godot Engine featuring procedural level generation.",
-        fullDescription: "A deep dive into procedural generation and action RPG mechanics. Players explore ever-changing dungeons with unique loot and challenging enemy AI. Features hand-crafted pixel art and a dynamic combat system.",
-        image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800",
-        link: "#",
-        githubLink: "https://github.com/iHoshiii",
-        tech: ["Godot", "GDScript"]
-    },
-    {
-        id: 5,
-        title: "Cyber Rush",
-        category: "Game Development",
-        description: "High-octane cyberpunk racer with Unity Engine using HDRP for realistic lighting.",
-        fullDescription: "An exploration of High Definition Render Pipeline in Unity. Experience blistering speeds through a neon-soaked city. Includes complex physics-based vehicle handling and advanced shader effects.",
-        image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800",
-        link: "#",
-        githubLink: "https://github.com/iHoshiii",
-        tech: ["Unity", "C#"]
-    },
-    {
-        id: 6,
-        title: "Shadow Realm",
-        category: "Game Development",
-        description: "Atmospheric horror game exploration system with advanced shader effects.",
-        fullDescription: "Focused on atmospheric storytelling and advanced rendering techniques. Players navigate a hauntingly beautiful world using an innovative light-based mechanic. Features custom shaders and high-fidelity 3D assets.",
-        image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=800",
-        link: "#",
-        githubLink: "https://github.com/iHoshiii",
-        tech: ["Unity", "C#", "Blender"]
-    },
-    {
         id: 8,
         title: "Pixel Odyssey",
         category: "Game Development",

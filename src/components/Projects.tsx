@@ -17,9 +17,8 @@ const Projects: React.FC = () => {
                 className="text-center mb-16"
             >
                 <h2 className="text-4xl md:text-5xl font-bold mb-4 font-outfit text-black dark:text-white">
-                    Selected <span className="text-black/50 dark:text-white/50">Work</span>
+                    Top Projects <span className="text-black/50 dark:text-white/50"></span>
                 </h2>
-                <p className="text-gray-500 dark:text-gray-400 text-lg">A collection of projects built with precision and passion.</p>
             </motion.div>
 
             {/* Tabs Navigation */}
@@ -29,8 +28,8 @@ const Projects: React.FC = () => {
                         key={tab}
                         onClick={() => setActiveTab(tab)}
                         className={`px-8 py-3 rounded-full text-sm font-bold border-2 transition-all duration-300 ${activeTab === tab
-                                ? 'bg-black text-white border-black dark:bg-white dark:text-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.1)]'
-                                : 'bg-white dark:bg-transparent text-black dark:text-white border-black/10 dark:border-white/10 hover:border-black dark:hover:border-white'
+                            ? 'bg-black text-white border-black dark:bg-white dark:text-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.1)]'
+                            : 'bg-white dark:bg-transparent text-black dark:text-white border-black/10 dark:border-white/10 hover:border-black dark:hover:border-white'
                             }`}
                     >
                         {tab}
@@ -38,7 +37,7 @@ const Projects: React.FC = () => {
                 ))}
             </div>
 
-            <div className="relative">
+            <div className="max-w-4xl mx-auto">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={activeTab}
@@ -46,7 +45,7 @@ const Projects: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.5 }}
-                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                        className={`grid gap-12 ${filteredProjects.length === 1 ? 'grid-cols-1 max-w-2xl mx-auto' : 'grid-cols-1 md:grid-cols-2'}`}
                     >
                         {filteredProjects.map((project, index) => (
                             <ProjectCard key={project.id} project={project} index={index} />

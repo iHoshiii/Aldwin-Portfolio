@@ -17,11 +17,11 @@ export const projects: Project[] = [
         title: "Kasal-Link",
         category: "Web Development",
         description: "Kasal-Link: Application for Marriage License System Innovation Challenge from LGU Solano Nueva Vizaya",
-        fullDescription: "Kasal-Link is a digital transformation initiative for the Local Government Unit of Solano. It streamlines the marriage license application process, reducing wait times and improving record accuracy. Built with a focus on ease of use for citizens and efficient management for LGU staff.",
+        fullDescription: "The Solano Marriage License System is a web-based platform designed specifically for the Local Government Unit (LGU) of Solano’s Municipal Civil Registrar Office (MCRO). By moving the process online, the system simplifies how residents apply for marriage licenses while helping staff manage records more efficiently.",
         image: "/images/SolanoMarriageLicense/Presentation.png",
         link: "https://solanomarriagesystem.vercel.app/",
         githubLink: "https://github.com/iHoshiii/Marriage-License-System",
-        tech: ["React", "Next.js", "Supabase", "Vercel"],
+        tech: ["React", "Tailwindcss", "Next.js", "Supabase", "Vercel"],
         gallery: [
             "/images/SolanoMarriageLicense/DataPrivacy.jpg",
             "/images/SolanoMarriageLicense/ApplicationForm.jpg",

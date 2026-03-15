@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Hero: React.FC = () => {
+const Home: React.FC = () => {
     return (
         <header id="home" className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20 overflow-hidden">
             {/* Decorative Background Glow - Minimal Dark */}
@@ -21,4 +21,4 @@ const Hero: React.FC = () => {
     );
 };
 
-export default Hero;
+export default Home;

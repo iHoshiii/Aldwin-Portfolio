@@ -29,8 +29,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                         View Project <ArrowRight size={18} className="group-hover/link:translate-x-1 transition-transform" />
                     </a>
                     <div className="flex gap-4 text-gray-500">
-                        <Github size={20} className="hover:text-white cursor-pointer transition-colors" />
-                        <ExternalLink size={20} className="hover:text-white cursor-pointer transition-colors" />
+                        <Github size={20} className="hover:text-black cursor-pointer transition-colors" />
+                        <ExternalLink size={20} className="hover:text-black cursor-pointer transition-colors" />
                     </div>
                 </div>
             </div>

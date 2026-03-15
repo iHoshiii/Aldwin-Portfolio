@@ -1,7 +1,7 @@
 import React from 'react';
 import { Github, Linkedin, Twitter, Instagram, Mail } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const Contacts: React.FC = () => {
     return (
         <footer id="contacts" className="py-24 border-t border-black/5 container mx-auto px-6 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 font-outfit text-black">
@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
             </h2>
             <div className="flex justify-center gap-6 mb-12">
                 {[
-                    { icon: Github, href: "#" },
+                    { icon: Github, href: "https://github.com/iHoshiii" },
                     { icon: Linkedin, href: "#" },
                     { icon: Twitter, href: "#" },
                     { icon: Instagram, href: "#" },
@@ -31,4 +31,4 @@ const Footer: React.FC = () => {
     );
 };
 
-export default Footer;
+export default Contacts;

@@ -3,9 +3,9 @@ import { Github, Linkedin, Twitter, Instagram, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
     return (
-        <footer id="contact" className="py-24 border-t border-white/10 container mx-auto px-6 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 font-outfit">
-                Let's <span className="text-white">Connect</span>
+        <footer id="contact" className="py-24 border-t border-black/5 container mx-auto px-6 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 font-outfit text-black">
+                Let's <span className="text-black/50">Connect</span>
             </h2>
             <div className="flex justify-center gap-6 mb-12">
                 {[
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
                     <a
                         key={i}
                         href={social.href}
-                        className="w-14 h-14 flex justify-center items-center bg-white/5 border border-white/10 rounded-full hover:bg-white hover:text-black hover:border-white hover:-translate-y-2 transition-all duration-300"
+                        className="w-14 h-14 flex justify-center items-center bg-gray-50 border border-black/5 rounded-full text-black hover:bg-black hover:text-white hover:border-black hover:-translate-y-2 transition-all duration-300"
                     >
                         <social.icon size={24} />
                     </a>

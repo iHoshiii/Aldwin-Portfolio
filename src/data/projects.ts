@@ -43,7 +43,7 @@ export const projects: Project[] = [
         description: "A recreation of the classic arcade game Pacman in 3D version.",
         fullDescription: "Pacmad is a collaborative game created by us, computer science students. It is a recreation of Pac-Man, but with a twist. Pac-Man has become the enemy. He accuses the players of stealing his food, while our true intention is actually to fix the bugs inside the game.",
         image: "/images/PacMad/BGImage.jpg",
-        link: "/PacMadFiles/PacMadVid.mp4",
+        link: "https://drive.google.com/drive/u/1/folders/1nde8Q0uaTyEFcBT6aDzEEzrTCXzjE8vn",
         githubLink: "https://www.facebook.com/share/v/1F1STNPZoL/",
         tech: ["Unity", "Unity Version Control", "C#", "Photoshop", "Blender"],
         primaryLinkLabel: "Game Video",

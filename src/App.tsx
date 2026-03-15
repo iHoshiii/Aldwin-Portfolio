@@ -1,19 +1,19 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import Chatbot from './components/Chatbot';
+import Home from './components/Home';
 import Background from './components/Background';
 import Projects from './components/Projects';
-import Footer from './components/Header';
-import Chatbot from './components/Chatbot';
+import Contacts from './components/Contacts';
 
 const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-white text-black">
       <Navbar />
-      <Hero />
+      <Home />
       <Background />
       <Projects />
-      <Footer />
+      <Contacts />
       <Chatbot />
     </div>
   );

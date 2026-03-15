@@ -23,7 +23,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             <div className="p-8 flex-grow flex flex-col">
                 <span className="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-bold mb-2">{project.category}</span>
                 <h3 className="text-2xl font-bold mb-3 font-outfit text-black dark:text-white">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-8 flex-grow">{project.description}</p>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-grow">{project.description}</p>
+
+                {project.tech && (
+                    <div className="flex flex-wrap gap-2 mb-8">
+                        {project.tech.map((t) => (
+                            <span key={t} className="px-3 py-1 bg-white/50 dark:bg-white/5 border border-black/5 dark:border-white/5 rounded-full text-[10px] font-bold text-black/60 dark:text-white/60 uppercase">
+                                {t}
+                            </span>
+                        ))}
+                    </div>
+                )}
+
                 <div className="mt-auto flex justify-between items-center">
                     <a href={project.link} className="flex items-center gap-2 text-sm font-semibold text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors group/link">
                         View Project <ArrowRight size={18} className="group-hover/link:translate-x-1 transition-transform" />

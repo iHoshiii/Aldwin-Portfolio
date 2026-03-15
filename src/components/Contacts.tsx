@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Twitter, Instagram, Mail } from 'lucide-react';
+import { Github, Linkedin, Facebook, Instagram, Mail } from 'lucide-react';
 
 const Contacts: React.FC = () => {
     return (
@@ -11,7 +11,7 @@ const Contacts: React.FC = () => {
                 {[
                     { icon: Github, href: "https://github.com/iHoshiii" },
                     { icon: Linkedin, href: "#" },
-                    { icon: Twitter, href: "#" },
+                    { icon: Facebook, href: "#" },
                     { icon: Instagram, href: "#" },
                     { icon: Mail, href: "mailto:contact@example.com" }
                 ].map((social, i) => (

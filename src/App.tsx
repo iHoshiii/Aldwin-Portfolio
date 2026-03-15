@@ -1,7 +1,16 @@
 import React from 'react';
-import { Github, Globe, Linkedin, Mail, ExternalLink, ArrowRight, Instagram, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, ArrowRight, Instagram, Twitter } from 'lucide-react';
 
-const projects = [
+interface Project {
+  id: number;
+  title: string;
+  category: string;
+  description: string;
+  image: string;
+  link: string;
+}
+
+const projects: Project[] = [
   {
     id: 1,
     title: "Analytics SaaS Dashboard",
@@ -32,6 +41,7 @@ const projects = [
     category: "Mobile Design",
     description: "Intuitive personal finance management app featuring beautiful dark-mode charts.",
     image: "/images/project4.png",
+    image: "/images/project4.png",
     link: "#"
   },
   {
@@ -52,7 +62,7 @@ const projects = [
   }
 ];
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#050505] text-white">
       {/* Navbar */}
@@ -156,7 +166,7 @@ function App() {
           ))}
         </div>
         <p className="text-gray-500 text-sm font-medium">
-          © {new Date().getFullYear()} Aldwin. Built with React, Tailwind & Vercel.
+          © {new Date().getFullYear()} Aldwin. Built with React, TypeScript, Tailwind & Vercel.
         </p>
       </footer>
     </div>

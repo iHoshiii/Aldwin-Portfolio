@@ -84,47 +84,60 @@ const Home: React.FC = () => {
 
                             {/* Modal Content */}
                             <div className="p-8 overflow-y-auto space-y-12">
-                                {/* Philosophy Section (Moved from Background) */}
-                                <section className="text-center">
+                                {/* Philosophy Section */}
+                                <section className="text-center px-4">
                                     <p className="text-gray-600 leading-relaxed text-lg italic">
                                         "I believe in the power of simplicity. My approach to design and development is rooted in the 'Less is More',
                                         focusing on high-contrast aesthetics and greater user experience."
                                     </p>
                                 </section>
 
-                                {/* Skills Grid (Moved from Background) */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center px-4">
-                                    {categories.map((category) => (
-                                        <div key={category.title} className="space-y-4">
-                                            <h3 className="text-xl font-bold border-b-2 border-black/5 pb-2 inline-block">
-                                                {category.title}
-                                            </h3>
-                                            <div className="flex flex-wrap justify-center gap-2">
-                                                {category.skills.map((skill) => (
-                                                    <span
-                                                        key={skill}
-                                                        className="px-3 py-1.5 border-2 border-black rounded-xl text-[10px] font-bold text-black bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
-                                                    >
-                                                        {skill}
-                                                    </span>
-                                                ))}
-                                            </div>
+                                {/* Skills & Meta Grid */}
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 text-center px-4">
+                                    {/* Web & Game Dev (First Row) */}
+                                    <div className="space-y-4">
+                                        <h3 className="text-xl font-bold border-b-2 border-black/5 pb-2 inline-block">Web Development</h3>
+                                        <div className="flex flex-wrap justify-center gap-2">
+                                            {categories[0].skills.map(skill => (
+                                                <span key={skill} className="px-4 py-1.5 border border-black/10 rounded-full text-xs font-semibold text-black bg-white">
+                                                    {skill}
+                                                </span>
+                                            ))}
                                         </div>
-                                    ))}
-                                </div>
+                                    </div>
+                                    <div className="space-y-4">
+                                        <h3 className="text-xl font-bold border-b-2 border-black/5 pb-2 inline-block">Game Development</h3>
+                                        <div className="flex flex-wrap justify-center gap-2">
+                                            {categories[1].skills.map(skill => (
+                                                <span key={skill} className="px-4 py-1.5 border border-black/10 rounded-full text-xs font-semibold text-black bg-white">
+                                                    {skill}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
 
-                                <section className="p-6 bg-gray-50 rounded-2xl border border-black/5 text-center">
-                                    <div className="mb-4 text-black">
-                                        <h3 className="text-xl font-bold">Interests</h3>
+                                    {/* Languages & Interests (Second Row) */}
+                                    <div className="space-y-4">
+                                        <h3 className="text-xl font-bold border-b-2 border-black/5 pb-2 inline-block">Languages</h3>
+                                        <div className="flex flex-wrap justify-center gap-2">
+                                            {categories[2].skills.map(skill => (
+                                                <span key={skill} className="px-4 py-1.5 border border-black/10 rounded-full text-xs font-semibold text-black bg-white">
+                                                    {skill}
+                                                </span>
+                                            ))}
+                                        </div>
                                     </div>
-                                    <div className="flex flex-wrap justify-center gap-2">
-                                        {['Open Source', 'UI/UX Design', 'AI', 'Game Jams', 'Coding'].map((item) => (
-                                            <span key={item} className="px-4 py-1.5 border border-black/10 rounded-full text-xs font-semibold text-black bg-white">
-                                                {item}
-                                            </span>
-                                        ))}
+                                    <div className="space-y-4">
+                                        <h3 className="text-xl font-bold border-b-2 border-black/5 pb-2 inline-block">Interests</h3>
+                                        <div className="flex flex-wrap justify-center gap-2">
+                                            {['Open Source', 'UI/UX Design', 'AI', 'Game Jams', 'Coding'].map((item) => (
+                                                <span key={item} className="px-4 py-1.5 border border-black/10 rounded-full text-xs font-semibold text-black bg-white">
+                                                    {item}
+                                                </span>
+                                            ))}
+                                        </div>
                                     </div>
-                                </section>
+                                </div>
                             </div>
                         </motion.div>
                     </div>

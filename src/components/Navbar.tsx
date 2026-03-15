@@ -1,10 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Navbar: React.FC = () => {
+    const [activeSection, setActiveSection] = useState('home');
+
+    useEffect(() => {
+        const sections = ['home', 'credentials', 'projects', 'contacts'];
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '-50% 0px -50% 0px', // Trigger when section is in the middle of the screen
+            threshold: 0
+        };
+
+        const observerCallback = (entries: IntersectionObserverEntry[]) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActiveSection(entry.target.id);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        sections.forEach((id) => {
+            const element = document.getElementById(id);
+            if (element) observer.observe(element);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
     const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         if (href.startsWith('#')) {
             e.preventDefault();
-            const element = document.querySelector(href);
+            const id = href.replace('#', '');
+            const element = document.getElementById(id);
             if (element) {
                 element.scrollIntoView({
                     behavior: 'smooth',
@@ -27,19 +57,26 @@ const Navbar: React.FC = () => {
                         { name: 'Projects', href: '#projects' },
                         { name: 'Contacts', href: '#contacts' },
                         { name: 'Repository', href: 'https://github.com/iHoshiii', external: true }
-                    ].map((item) => (
-                        <li key={item.name}>
-                            <a
-                                href={item.href}
-                                onClick={(e) => scrollToSection(e, item.href)}
-                                target={item.external ? "_blank" : undefined}
-                                rel={item.external ? "noopener noreferrer" : undefined}
-                                className="text-sm font-bold text-black border-2 border-black px-4 py-2 rounded-full hover:bg-black hover:text-white transition-all duration-300"
-                            >
-                                {item.name}
-                            </a>
-                        </li>
-                    ))}
+                    ].map((item) => {
+                        const isActive = activeSection === item.href.replace('#', '');
+
+                        return (
+                            <li key={item.name}>
+                                <a
+                                    href={item.href}
+                                    onClick={(e) => scrollToSection(e, item.href)}
+                                    target={item.external ? "_blank" : undefined}
+                                    rel={item.external ? "noopener noreferrer" : undefined}
+                                    className={`text-sm font-bold border-2 border-black px-4 py-2 rounded-full transition-all duration-300 ${isActive
+                                            ? 'bg-black text-white'
+                                            : 'text-black hover:bg-black hover:text-white'
+                                        }`}
+                                >
+                                    {item.name}
+                                </a>
+                            </li>
+                        );
+                    })}
                 </ul>
             </div>
         </nav>

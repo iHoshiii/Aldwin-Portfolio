@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
                 <div className="text-2xl font-bold font-outfit text-black">
                     Aldwin Loreto<span className="text-black/40">'s Portfolio</span>
                 </div>
-                <ul className="hidden md:flex gap-10">
+                <ul className="hidden md:flex gap-4">
                     {['Home', 'Background', 'Projects', 'Contacts'].map((item) => (
                         <li key={item}>
                             <a

@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
                 ))}
             </div>
             <p className="text-gray-500 text-sm font-medium">
-                © {new Date().getFullYear()} Aldwin. Built with React, TypeScript, Tailwind & Vercel.
+                © {new Date().getFullYear()} Aldwin Bernard V. Loreto.
             </p>
         </footer>
     );

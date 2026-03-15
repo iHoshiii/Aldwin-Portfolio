@@ -1,16 +1,28 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Background: React.FC = () => {
     return (
         <section id="background" className="py-32 bg-gray-50 border-y border-black/5">
             <div className="container mx-auto px-6">
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-12 font-outfit text-black">
+                    <motion.h2
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="text-4xl md:text-5xl font-bold mb-12 font-outfit text-black"
+                    >
                         My <span className="text-black/50">Background</span>
-                    </h2>
+                    </motion.h2>
 
                     <div className="space-y-12">
-                        <div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                        >
                             <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                                 <span className="w-8 h-[2px] bg-black"></span>
                                 Philosophy
@@ -20,10 +32,15 @@ const Background: React.FC = () => {
                                 focusing on high-contrast aesthetics and intuitive user experiences. I specialize in building robust full-stack applications
                                 that are as fast as they are beautiful.
                             </p>
-                        </div>
+                        </motion.div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                            <div>
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: 0.3 }}
+                            >
                                 <h3 className="text-xl font-bold mb-6">Expertise</h3>
                                 <ul className="space-y-3">
                                     {['Full Stack Development', 'UI/UX Design', 'AI Integration', 'Cloud Architecture'].map((skill) => (
@@ -33,8 +50,13 @@ const Background: React.FC = () => {
                                         </li>
                                     ))}
                                 </ul>
-                            </div>
-                            <div>
+                            </motion.div>
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: 0.4 }}
+                            >
                                 <h3 className="text-xl font-bold mb-6">Technologies</h3>
                                 <div className="flex flex-wrap gap-2">
                                     {['React', 'TypeScript', 'Tailwind', 'Next.js', 'Node.js', 'PostgreSQL', 'Vercel', 'Gemini AI'].map((tech) => (
@@ -43,7 +65,7 @@ const Background: React.FC = () => {
                                         </span>
                                     ))}
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>

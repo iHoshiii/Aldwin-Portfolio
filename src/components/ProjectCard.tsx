@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, ExternalLink, ArrowRight, X } from 'lucide-react';
+import { Github, ExternalLink, ArrowRight, X, Play, FileText } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Project } from '../data/projects';
 
@@ -48,13 +48,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                         </button>
                         <div className="flex gap-4 text-gray-500 dark:text-gray-400">
                             {project.githubLink && (
-                                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white transition-colors">
-                                    <Github size={20} />
+                                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white transition-colors" title={project.secondaryLinkLabel || 'Repository'}>
+                                    {project.secondaryLinkLabel === 'Documentation' ? <FileText size={20} /> : <Github size={20} />}
                                 </a>
                             )}
                             {project.link !== "#" && (
-                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white transition-colors">
-                                    <ExternalLink size={20} />
+                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white transition-colors" title={project.primaryLinkLabel || 'Website Link'}>
+                                    {project.primaryLinkLabel === 'Game Video' ? <Play size={20} /> : <ExternalLink size={20} />}
                                 </a>
                             )}
                         </div>
@@ -144,7 +144,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                                                             rel="noopener noreferrer"
                                                             className="flex items-center justify-between group/btn px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-2xl font-bold hover:-translate-y-1 transition-all duration-300"
                                                         >
-                                                            <span className="flex items-center gap-3"><Github size={22} /> Repository</span>
+                                                            <span className="flex items-center gap-3">
+                                                                {project.secondaryLinkLabel === 'Documentation' ? <FileText size={22} /> : <Github size={22} />}
+                                                                {project.secondaryLinkLabel || 'Repository'}
+                                                            </span>
                                                             <ArrowRight size={20} className="group-hover/btn:translate-x-1 transition-transform" />
                                                         </a>
                                                     )}
@@ -155,7 +158,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                                                             rel="noopener noreferrer"
                                                             className="flex items-center justify-between group/btn px-8 py-4 border-2 border-black dark:border-white text-black dark:text-white rounded-2xl font-bold hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
                                                         >
-                                                            <span className="flex items-center gap-3"><ExternalLink size={22} /> Website Link</span>
+                                                            <span className="flex items-center gap-3">
+                                                                {project.primaryLinkLabel === 'Game Video' ? <Play size={22} /> : <ExternalLink size={22} />}
+                                                                {project.primaryLinkLabel || 'Website Link'}
+                                                            </span>
                                                             <ArrowRight size={20} className="group-hover/btn:translate-x-1 transition-transform" />
                                                         </a>
                                                     )}

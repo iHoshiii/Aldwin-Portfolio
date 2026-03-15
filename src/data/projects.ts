@@ -9,6 +9,8 @@ export interface Project {
     githubLink?: string;
     tech?: string[];
     gallery?: string[];
+    primaryLinkLabel?: string;
+    secondaryLinkLabel?: string;
 }
 
 export const projects: Project[] = [
@@ -52,5 +54,18 @@ export const projects: Project[] = [
         link: "#",
         githubLink: "https://github.com/iHoshiii",
         tech: ["Unity", "C#", "HLSL"]
+    },
+    {
+        id: 10,
+        title: "PacMad: Pacman 3d",
+        category: "Game Development",
+        description: "A modernized 3D reimagining of the classic arcade game featuring dynamic camera angles.",
+        fullDescription: "PacMad brings the iconic Pacman gameplay into a fully 3D environment. Rebuilt with Unity, it features precise grid movement, classic AI behaviors perfectly mapped to 3D space, and an atmospheric visual style.",
+        image: "https://preview.redd.it/pacman-3d-rendered-in-an-isometric-perspective-v0-v9ofjytnd5ba1.jpg?width=1024&format=pjpg&auto=webp&s=ef9e0487052a65aa21aadb9c24ce62534f5aaebb",
+        link: "#",
+        githubLink: "#",
+        tech: ["Unity", "C#"],
+        primaryLinkLabel: "Game Video",
+        secondaryLinkLabel: "Documentation"
     }
 ];

@@ -11,39 +11,12 @@ export interface Project {
 export const projects: Project[] = [
     {
         id: 1,
-        title: "Modern Portfolio",
+        title: "Kasal-Link",
         category: "Web Development",
-        description: "A high-performance portfolio platform with Framer Motion animations and dark mode.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+        description: "Application for Marriage License System Innovation Challenge from LGU Solano Nueva Vizaya",
+        image: "/images/SolanoMarriageLicense/Presentation.png",
         link: "#",
-        tech: ["React", "Tailwind", "Framer Motion"]
-    },
-    {
-        id: 2,
-        title: "E-Commerce App",
-        category: "Web Development",
-        description: "A full-stack shopping experience with Supabase integration and real-time updates.",
-        image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800",
-        link: "#",
-        tech: ["Next.js", "Supabase", "Tailwind"]
-    },
-    {
-        id: 3,
-        title: "SaaS Dashboard",
-        category: "Web Development",
-        description: "Advanced analytics dashboard with complex data visualization and user management.",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-        link: "#",
-        tech: ["React", "Node.js", "Chart.js"]
-    },
-    {
-        id: 7,
-        title: "Real-time Chat App",
-        category: "Web Development",
-        description: "Scalable chat application featuring instant messaging, rooms, and media sharing.",
-        image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&q=80&w=800",
-        link: "#",
-        tech: ["Socket.io", "React", "Express"]
+        tech: ["React", "Tailwindcss", "Next.js", "Supabase", "Vercel"]
     },
     {
         id: 4,

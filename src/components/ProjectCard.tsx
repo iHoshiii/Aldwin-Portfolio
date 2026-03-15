@@ -49,7 +49,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                         <div className="flex gap-4 text-gray-500 dark:text-gray-400">
                             {project.githubLink && (
                                 <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white transition-colors" title={project.secondaryLinkLabel || 'Repository'}>
-                                    {project.secondaryLinkLabel === 'Documentation' ? <FileText size={20} /> : <Github size={20} />}
+                                    {project.secondaryLinkLabel === 'Documentation' || project.secondaryLinkLabel === 'Game Paper' ? <FileText size={20} /> : <Github size={20} />}
                                 </a>
                             )}
                             {project.link !== "#" && (
@@ -145,7 +145,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                                                             className="flex items-center justify-between group/btn px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-2xl font-bold hover:-translate-y-1 transition-all duration-300"
                                                         >
                                                             <span className="flex items-center gap-3">
-                                                                {project.secondaryLinkLabel === 'Documentation' ? <FileText size={22} /> : <Github size={22} />}
+                                                                {project.secondaryLinkLabel === 'Documentation' || project.secondaryLinkLabel === 'Game Paper' ? <FileText size={22} /> : <Github size={22} />}
                                                                 {project.secondaryLinkLabel || 'Repository'}
                                                             </span>
                                                             <ArrowRight size={20} className="group-hover/btn:translate-x-1 transition-transform" />

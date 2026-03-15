@@ -47,7 +47,7 @@ export const projects: Project[] = [
         githubLink: "https://www.facebook.com/share/v/1F1STNPZoL/",
         tech: ["Unity", "Unity Version Control", "C#", "Photoshop", "Blender"],
         primaryLinkLabel: "Game Video",
-        secondaryLinkLabel: "Documentations",
+        secondaryLinkLabel: "Documentation",
         tertiaryLink: "/PacMadFiles/PacMadPaper.docx",
         tertiaryLinkLabel: "Game Paper",
         gallery: [

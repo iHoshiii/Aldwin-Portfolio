@@ -13,7 +13,7 @@ const Projects: React.FC = () => {
                 className="text-center mb-20"
             >
                 <h2 className="text-4xl md:text-5xl font-bold mb-4 font-outfit text-black dark:text-white">
-                    Selected <span className="text-black/50 dark:text-white/50">Work</span>
+                    Selected Work<span className="text-black/50 dark:text-white/50"></span>
                 </h2>
                 <p className="text-gray-500 dark:text-gray-400 text-lg">A collection of projects built with precision and passion.</p>
             </motion.div>

@@ -13,7 +13,7 @@ const Credentials: React.FC = () => {
                         transition={{ duration: 0.6 }}
                         className="text-4xl md:text-5xl font-bold mb-16 font-outfit text-black dark:text-white text-center"
                     >
-                        My <span className="text-black/50 dark:text-white/50">Credentials</span>
+                        My Credentials<span className="text-black/50 dark:text-white/50"></span>
                     </motion.h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -31,7 +31,7 @@ const Home: React.FC = () => {
                 transition={{ duration: 0.8 }}
                 className="text-5xl md:text-8xl font-bold font-outfit leading-[1.1] mb-6 max-w-5xl text-black dark:text-white"
             >
-                Good <span className="text-black/50 dark:text-white/50">Day</span> Everyone!
+                Good Day<span className="text-black/50 dark:text-white/50"></span> Everyone!
             </motion.h1>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}

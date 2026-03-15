@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
                 <ul className="hidden md:flex gap-4">
                     {[
                         { name: 'Home', href: '#home' },
-                        { name: 'Background', href: '#background' },
+                        { name: 'Credentials', href: '#credentials' },
                         { name: 'Projects', href: '#projects' },
                         { name: 'Contacts', href: '#contacts' },
                         { name: 'Repository', href: 'https://github.com/iHoshiii', external: true }

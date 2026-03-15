@@ -5,6 +5,21 @@ import { X } from 'lucide-react';
 const Home: React.FC = () => {
     const [isAboutOpen, setIsAboutOpen] = React.useState(false);
 
+    const categories = [
+        {
+            title: 'Web Development',
+            skills: ['React', 'Next.js', 'Node.js', 'Supabase', 'Tailwind CSS']
+        },
+        {
+            title: 'Game Development',
+            skills: ['Godot Engine', 'Unity Engine', 'Blender', 'Photoshop']
+        },
+        {
+            title: 'Languages',
+            skills: ['Python', 'C#', 'C++', 'Java', 'JavaScript', 'Kotlin', 'GDScript', 'TypeScript']
+        }
+    ];
+
     return (
         <header id="home" className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20 overflow-hidden">
             {/* Decorative Background Glow - Minimal Dark */}
@@ -68,34 +83,34 @@ const Home: React.FC = () => {
                             </div>
 
                             {/* Modal Content */}
-                            <div className="p-8 overflow-y-auto space-y-8">
+                            <div className="p-8 overflow-y-auto space-y-12">
+                                {/* Philosophy Section (Moved from Background) */}
                                 <section className="text-center">
-                                    <div className="mb-4 text-black">
-                                        <h3 className="text-xl font-bold">Education</h3>
-                                    </div>
-                                    <p className="text-gray-600 leading-relaxed">
-                                        Currently pursuing a Bachelor of Science in Computer Science at Nueva Vizcaya State University.
-                                        My academic journey has shaped my logical thinking and provided a strong foundation in software engineering principles.
+                                    <p className="text-gray-600 leading-relaxed text-lg italic">
+                                        "I believe in the power of simplicity. My approach to design and development is rooted in the 'Less is More',
+                                        focusing on high-contrast aesthetics and greater user experience."
                                     </p>
                                 </section>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
-                                    <section>
-                                        <div className="mb-4 text-black">
-                                            <h3 className="text-xl font-bold">Web Development</h3>
+                                {/* Skills Grid (Moved from Background) */}
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center px-4">
+                                    {categories.map((category) => (
+                                        <div key={category.title} className="space-y-4">
+                                            <h3 className="text-xl font-bold border-b-2 border-black/5 pb-2 inline-block">
+                                                {category.title}
+                                            </h3>
+                                            <div className="flex flex-wrap justify-center gap-2">
+                                                {category.skills.map((skill) => (
+                                                    <span
+                                                        key={skill}
+                                                        className="px-3 py-1.5 border-2 border-black rounded-xl text-[10px] font-bold text-black bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+                                                    >
+                                                        {skill}
+                                                    </span>
+                                                ))}
+                                            </div>
                                         </div>
-                                        <p className="text-gray-600 text-sm leading-relaxed">
-                                            I am passionate about creating modern web applications using React, TypeScript, and Tailwind CSS.
-                                        </p>
-                                    </section>
-                                    <section>
-                                        <div className="mb-4 text-black">
-                                            <h3 className="text-xl font-bold">Game Development</h3>
-                                        </div>
-                                        <p className="text-gray-600 text-sm leading-relaxed">
-                                            When I'm not coding for the web, I'm diving into game mechanics and interactive experiences, exploring the cross-section of art and logic.
-                                        </p>
-                                    </section>
+                                    ))}
                                 </div>
 
                                 <section className="p-6 bg-gray-50 rounded-2xl border border-black/5 text-center">

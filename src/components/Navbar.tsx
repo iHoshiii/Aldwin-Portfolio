@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
         <nav className="fixed top-0 left-0 w-full py-6 z-50 bg-[#050505]/80 backdrop-blur-md border-b border-white/10">
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <div className="text-2xl font-bold font-outfit">
-                    ALD<span className="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">WIN.</span>
+                    ALD<span className="text-white">WIN.</span>
                 </div>
                 <ul className="hidden md:flex gap-10">
                     {['Home', 'Projects', 'About', 'Contact'].map((item) => (

@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
                         { name: 'Background', href: '#background' },
                         { name: 'Projects', href: '#projects' },
                         { name: 'Contacts', href: '#contacts' },
-                        { name: 'Repository', href: 'https://github.com/iHoshiii?tab=repositories', external: true }
+                        { name: 'Repository', href: 'https://github.com/iHoshiii', external: true }
                     ].map((item) => (
                         <li key={item.name}>
                             <a

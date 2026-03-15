@@ -13,7 +13,7 @@ const Contacts: React.FC = () => {
                     { icon: Linkedin, href: "#" },
                     { icon: Facebook, href: "#" },
                     { icon: Instagram, href: "#" },
-                    { icon: Mail, href: "mailto:contact@example.com" }
+                    { icon: Mail, href: "mailto:aldwinloreto690@gmail.com" }
                 ].map((social, i) => (
                     <a
                         key={i}

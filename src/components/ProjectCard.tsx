@@ -100,7 +100,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                                     {/* Left Column: Description & Gallery */}
                                     <div className="lg:col-span-8 space-y-12">
                                         <div className="space-y-6">
-                                            <h3 className="text-2xl font-bold border-b-2 border-black dark:border-white pb-3 inline-block">The Story</h3>
+                                            <h3 className="text-2xl font-bold border-b-2 border-black dark:border-white pb-3 inline-block">Description</h3>
                                             <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-xl font-medium">
                                                 {project.fullDescription || project.description}
                                             </p>
@@ -109,7 +109,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                                         {/* Grid Gallery */}
                                         {project.gallery && project.gallery.length > 0 && (
                                             <div className="space-y-8">
-                                                <h3 className="text-2xl font-bold border-b-2 border-black dark:border-white pb-3 inline-block">Snapshots</h3>
+                                                <h3 className="text-2xl font-bold border-b-2 border-black dark:border-white pb-3 inline-block">Sample Images</h3>
                                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                                     {project.gallery.map((img, idx) => (
                                                         <motion.div

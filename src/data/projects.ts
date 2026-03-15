@@ -33,28 +33,7 @@ export const projects: Project[] = [
             "/images/SolanoMarriageLicense/AdminDash.jpg"
         ]
     },
-    {
-        id: 8,
-        title: "Pixel Odyssey",
-        category: "Game Development",
-        description: "Charming 2D platformer with vintage pixel art and challenging mechanics.",
-        fullDescription: "A love letter to retro gaming. Pixel Odyssey combines precise platforming with hidden secrets and a nostalgic art style. Built with Godot to showcase 2D physics and animation.",
-        image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800",
-        link: "#",
-        githubLink: "https://github.com/iHoshiii",
-        tech: ["Godot", "Aseprite"]
-    },
-    {
-        id: 9,
-        title: "Stellar Horizon",
-        category: "Game Development",
-        description: "Grand space strategy game featuring complex economy and fleet management.",
-        fullDescription: "A large-scale strategy game exploring procedural universe generation and deep economic simulation. Manage entire star systems and command massive fleets in real-time.",
-        image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?auto=format&fit=crop&q=80&w=800",
-        link: "#",
-        githubLink: "https://github.com/iHoshiii",
-        tech: ["Unity", "C#", "HLSL"]
-    },
+
     {
         id: 10,
         title: "PacMad: Pacman 3d",
@@ -64,7 +43,7 @@ export const projects: Project[] = [
         image: "/images/PacMad/BGImage.jpg",
         link: "#",
         githubLink: "https://www.facebook.com/share/v/1F1STNPZoL/",
-        tech: ["Unity", "C#"],
+        tech: ["Unity", "Unity Version Control", "C#", "Photoshop", "Blender"],
         primaryLinkLabel: "Game Video",
         secondaryLinkLabel: "Documentation",
         gallery: [

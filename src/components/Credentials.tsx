@@ -73,7 +73,7 @@ const Credentials: React.FC = () => {
                                     <p className="text-gray-600 dark:text-gray-400 font-medium">Continuous Learning</p>
                                 </div>
                                 <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Compiling expertise in cloud-native technologies and AI integration. I aim to create scalable solutions that bridge the gap between complex logic and human interaction.
+                                    My goal is to become a Cloud Engineer, where I can leverage my technical expertise to design and implement scalable, secure, and efficient cloud-based solutions that drive business value and innovation.
                                 </p>
                             </div>
                         </motion.button>

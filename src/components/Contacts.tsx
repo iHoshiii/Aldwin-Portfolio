@@ -11,7 +11,7 @@ const Contacts: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 className="text-4xl md:text-5xl font-bold mb-12 font-outfit text-black dark:text-white"
             >
-                Let's <span className="text-black/50 dark:text-white/50">Connect</span>
+                Let's Connect<span className="text-black/50 dark:text-white/50"></span>
             </motion.h2>
             <div className="flex justify-center gap-6 mb-12">
                 {[

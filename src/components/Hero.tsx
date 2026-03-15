@@ -3,17 +3,17 @@ import React from 'react';
 const Hero: React.FC = () => {
     return (
         <header id="home" className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20 overflow-hidden">
-            {/* Decorative Background Glow */}
-            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-[100px] -z-10"></div>
+            {/* Decorative Background Glow - Minimal White */}
+            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/5 rounded-full blur-[120px] -z-10"></div>
 
             <h1 className="text-5xl md:text-8xl font-bold font-outfit leading-[1.1] mb-6 max-w-5xl animate-fade-in">
-                Building <span className="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">Digital Experiences</span> That Define The Future.
+                Building <span className="text-white">Digital Experiences</span> That Define The Future.
             </h1>
             <p className="text-lg md:text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed animate-fade-in [animation-delay:200ms]">
                 I'm a Full Stack Developer & Designer specializing in creating clean, modern, and high-performance applications.
             </p>
             <div className="animate-fade-in [animation-delay:400ms]">
-                <a href="#projects" className="px-10 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full font-semibold text-lg shadow-[0_10px_20px_-5px_rgba(99,102,241,0.4)] hover:shadow-[0_15px_30px_-5px_rgba(99,102,241,0.5)] hover:-translate-y-1 transition-all duration-300">
+                <a href="#projects" className="px-10 py-4 bg-white text-black rounded-full font-semibold text-lg shadow-[0_10px_20px_-5px_rgba(255,255,255,0.2)] hover:shadow-[0_15px_30px_-5px_rgba(255,255,255,0.3)] hover:-translate-y-1 transition-all duration-300">
                     View My Work
                 </a>
             </div>

@@ -13,7 +13,7 @@ const Background: React.FC = () => {
                         transition={{ duration: 0.6 }}
                         className="text-4xl md:text-5xl font-bold mb-12 font-outfit text-black"
                     >
-                        My <span className="text-black/50">Background</span>
+                        My Background<span className="text-black/50"></span>
                     </motion.h2>
 
                     <div className="space-y-12">
@@ -22,15 +22,11 @@ const Background: React.FC = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
+                            className="text-center"
                         >
-                            <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                                <span className="w-8 h-[2px] bg-black"></span>
-                                Philosophy
-                            </h3>
-                            <p className="text-gray-600 leading-relaxed text-lg">
-                                I believe in the power of simplicity. My approach to design and development is rooted in the "Less is More" philosophy,
-                                focusing on high-contrast aesthetics and intuitive user experiences. I specialize in building robust full-stack applications
-                                that are as fast as they are beautiful.
+                            <p className="text-gray-600 leading-relaxed text-lg max-w-3xl mx-auto">
+                                I believe in the power of simplicity. My approach to design and development is rooted in the "Less is More",
+                                focusing on high-contrast aesthetics and greater user experience.
                             </p>
                         </motion.div>
 

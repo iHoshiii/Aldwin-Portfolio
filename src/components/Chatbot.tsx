@@ -67,8 +67,8 @@ const Chatbot: React.FC = () => {
                         {/* Header */}
                         <div className="p-6 border-b border-black/5 flex justify-between items-center bg-gray-50">
                             <div>
-                                <h3 className="font-bold text-black">Chat with Aldwin AI</h3>
-                                <p className="text-xs text-gray-500">Ask me anything about my work</p>
+                                <h3 className="font-bold text-black">Chat with Aldwin's AI</h3>
+                                <p className="text-xs text-gray-500">Ask me anything about me</p>
                             </div>
                         </div>
 

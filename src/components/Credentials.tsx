@@ -19,14 +19,14 @@ const Credentials: React.FC = () => {
                         My Credentials<span className="text-black/50 dark:text-white/50"></span>
                     </motion.h2>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                         {/* Education Card */}
                         <motion.button
                             onClick={() => setIsEduModalOpen(true)}
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5 }}
-                            className="text-left w-full p-8 bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] transition-all group cursor-pointer"
+                            className="text-left w-full p-6 sm:p-8 bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] transition-all group cursor-pointer"
                         >
                             <div className="flex justify-between items-center mb-6">
                                 <div className="flex items-center gap-4 text-black dark:text-white">
@@ -55,7 +55,7 @@ const Credentials: React.FC = () => {
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
-                            className="text-left w-full p-8 bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] transition-all group cursor-pointer"
+                            className="text-left w-full p-6 sm:p-8 bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] transition-all group cursor-pointer"
                         >
                             <div className="flex justify-between items-center mb-6">
                                 <div className="flex items-center gap-4 text-black dark:text-white">
@@ -109,7 +109,7 @@ const Credentials: React.FC = () => {
                             initial={{ opacity: 0, scale: 0.9, y: 20 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                            className="relative w-full max-w-lg bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] dark:shadow-[16px_16px_0px_0px_rgba(255,255,255,0.1)] overflow-hidden"
+                            className="relative w-full max-w-lg bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] sm:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] dark:shadow-[12px_12px_0px_0px_rgba(255,255,255,0.1)] sm:dark:shadow-[16px_16px_0px_0px_rgba(255,255,255,0.1)] overflow-hidden"
                         >
                             <div className="p-6 border-b border-black/5 dark:border-white/5 flex justify-between items-center bg-gray-50 dark:bg-white/5">
                                 <div className="flex items-center gap-3 text-black dark:text-white">
@@ -124,30 +124,30 @@ const Credentials: React.FC = () => {
                                 </button>
                             </div>
 
-                            <div className="p-8 space-y-6">
+                            <div className="p-6 sm:p-8 space-y-4 sm:space-y-6">
                                 <a
                                     href="#"
-                                    className="flex items-center gap-4 p-6 border-2 border-black dark:border-white rounded-2xl hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all group"
+                                    className="flex items-center gap-4 p-5 sm:p-6 border-2 border-black dark:border-white rounded-2xl hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all group"
                                 >
-                                    <div className="p-3 bg-gray-100 dark:bg-white/10 rounded-xl group-hover:bg-white/20 dark:group-hover:bg-black/10 transition-colors">
-                                        <FileText size={28} />
+                                    <div className="p-2.5 sm:p-3 bg-gray-100 dark:bg-white/10 rounded-xl group-hover:bg-white/20 dark:group-hover:bg-black/10 transition-colors">
+                                        <FileText size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold">View Grades</h3>
-                                        <p className="text-sm opacity-70">Academic transcript and records</p>
+                                        <h3 className="text-lg sm:text-xl font-bold">View Grades</h3>
+                                        <p className="text-xs sm:text-sm opacity-70">Academic transcript and records</p>
                                     </div>
                                 </a>
 
                                 <a
                                     href="#"
-                                    className="flex items-center gap-4 p-6 border-2 border-black dark:border-white rounded-2xl hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all group"
+                                    className="flex items-center gap-4 p-5 sm:p-6 border-2 border-black dark:border-white rounded-2xl hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all group"
                                 >
-                                    <div className="p-3 bg-gray-100 dark:bg-white/10 rounded-xl group-hover:bg-white/20 dark:group-hover:bg-black/10 transition-colors">
-                                        <FileBadge size={28} />
+                                    <div className="p-2.5 sm:p-3 bg-gray-100 dark:bg-white/10 rounded-xl group-hover:bg-white/20 dark:group-hover:bg-black/10 transition-colors">
+                                        <FileBadge size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold">Journey</h3>
-                                        <p className="text-sm opacity-70">Photos of my college journey</p>
+                                        <h3 className="text-lg sm:text-xl font-bold">Journey</h3>
+                                        <p className="text-xs sm:text-sm opacity-70">Photos of my college journey</p>
                                     </div>
                                 </a>
                             </div>
@@ -171,7 +171,7 @@ const Credentials: React.FC = () => {
                             initial={{ opacity: 0, scale: 0.9, y: 20 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                            className="relative w-full max-w-lg bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] dark:shadow-[16px_16px_0px_0px_rgba(255,255,255,0.1)] overflow-hidden"
+                            className="relative w-full max-w-lg bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] sm:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] dark:shadow-[12px_12px_0px_0px_rgba(255,255,255,0.1)] sm:dark:shadow-[16px_16px_0px_0px_rgba(255,255,255,0.1)] overflow-hidden"
                         >
                             <div className="p-6 border-b border-black/5 dark:border-white/5 flex justify-between items-center bg-gray-50 dark:bg-white/5">
                                 <div className="flex items-center gap-3 text-black dark:text-white">
@@ -186,30 +186,30 @@ const Credentials: React.FC = () => {
                                 </button>
                             </div>
 
-                            <div className="p-8 space-y-6">
+                            <div className="p-6 sm:p-8 space-y-4 sm:space-y-6">
                                 <a
                                     href="#"
-                                    className="flex items-center gap-4 p-6 border-2 border-black dark:border-white rounded-2xl hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all group"
+                                    className="flex items-center gap-4 p-5 sm:p-6 border-2 border-black dark:border-white rounded-2xl hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all group"
                                 >
-                                    <div className="p-3 bg-gray-100 dark:bg-white/10 rounded-xl group-hover:bg-white/20 dark:group-hover:bg-black/10 transition-colors">
-                                        <FileBadge size={28} />
+                                    <div className="p-2.5 sm:p-3 bg-gray-100 dark:bg-white/10 rounded-xl group-hover:bg-white/20 dark:group-hover:bg-black/10 transition-colors">
+                                        <FileBadge size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold">Certificates</h3>
-                                        <p className="text-sm opacity-70">Physical awards and certifications</p>
+                                        <h3 className="text-lg sm:text-xl font-bold">Certificates</h3>
+                                        <p className="text-xs sm:text-sm opacity-70">Physical awards and certifications</p>
                                     </div>
                                 </a>
 
                                 <a
                                     href="#"
-                                    className="flex items-center gap-4 p-6 border-2 border-black dark:border-white rounded-2xl hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all group"
+                                    className="flex items-center gap-4 p-5 sm:p-6 border-2 border-black dark:border-white rounded-2xl hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all group"
                                 >
-                                    <div className="p-3 bg-gray-100 dark:bg-white/10 rounded-xl group-hover:bg-white/20 dark:group-hover:bg-black/10 transition-colors">
-                                        <FileText size={28} />
+                                    <div className="p-2.5 sm:p-3 bg-gray-100 dark:bg-white/10 rounded-xl group-hover:bg-white/20 dark:group-hover:bg-black/10 transition-colors">
+                                        <FileText size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold">E-certificates</h3>
-                                        <p className="text-sm opacity-70">Digital credentials and courses</p>
+                                        <h3 className="text-lg sm:text-xl font-bold">E-certificates</h3>
+                                        <p className="text-xs sm:text-sm opacity-70">Digital credentials and courses</p>
                                     </div>
                                 </a>
                             </div>

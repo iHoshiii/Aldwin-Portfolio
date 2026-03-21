@@ -99,22 +99,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                             </div>
 
                             {/* Modal Content */}
-                            <div className="p-8 md:p-12 overflow-y-auto custom-scrollbar">
-                                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-16">
+                            <div className="p-5 sm:p-8 md:p-12 overflow-y-auto custom-scrollbar">
+                                <div className="flex flex-col lg:grid lg:grid-cols-12 gap-10 md:gap-16">
 
                                     {/* Left Column: Description & Gallery */}
                                     <div className="lg:col-span-8 space-y-12">
                                         <div className="space-y-6">
-                                            <h3 className="text-2xl font-bold border-b-2 border-black dark:border-white pb-3 inline-block">Description</h3>
-                                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-xl font-medium">
+                                            <h3 className="text-xl sm:text-2xl font-bold border-b-2 border-black dark:border-white pb-3 inline-block">Description</h3>
+                                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-base sm:text-xl font-medium">
                                                 {project.fullDescription || project.description}
                                             </p>
                                         </div>
 
                                         {/* Grid Gallery */}
                                         {project.gallery && project.gallery.length > 0 && (
-                                            <div className="space-y-8">
-                                                <h3 className="text-2xl font-bold border-b-2 border-black dark:border-white pb-3 inline-block">Sample Images</h3>
+                                            <div className="space-y-6 sm:space-y-8">
+                                                <h3 className="text-xl sm:text-2xl font-bold border-b-2 border-black dark:border-white pb-3 inline-block">Sample Images</h3>
                                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                                     {project.gallery.map((img, idx) => (
                                                         <motion.div
@@ -136,11 +136,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                                         )}
                                     </div>
 
-                                    {/* Right Column: Links & Tech (Sticky on Desktop) */}
-                                    <div className="lg:col-span-4 space-y-12">
-                                        <div className="sticky top-0 space-y-10">
+                                    {/* Right Column: Links & Tech */}
+                                    <div className="lg:col-span-4 space-y-10 lg:space-y-12">
+                                        <div className="lg:sticky lg:top-0 space-y-8 lg:space-y-10">
                                             <div className="space-y-6">
-                                                <h3 className="text-2xl font-bold border-b-2 border-black dark:border-white pb-3 inline-block">Resources</h3>
+                                                <h3 className="text-xl sm:text-2xl font-bold border-b-2 border-black dark:border-white pb-3 inline-block">Resources</h3>
                                                 <div className="flex flex-col gap-4">
                                                     {project.githubLink && (
                                                         <a
@@ -188,7 +188,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                                             </div>
 
                                             <div className="space-y-6">
-                                                <h3 className="text-2xl font-bold border-b-2 border-black dark:border-white pb-3 inline-block">Built With</h3>
+                                                <h3 className="text-xl sm:text-2xl font-bold border-b-2 border-black dark:border-white pb-3 inline-block">Built With</h3>
                                                 <div className="flex flex-wrap gap-3">
                                                     {project.tech?.map((t) => (
                                                         <span key={t} className="px-5 py-2 bg-gray-100 dark:bg-white/5 rounded-xl text-sm font-bold text-black dark:text-white border border-black/5 dark:border-white/5">

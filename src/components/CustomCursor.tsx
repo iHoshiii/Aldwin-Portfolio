@@ -13,8 +13,21 @@ const CustomCursor: React.FC = () => {
             });
         };
 
+        const touchMove = (e: TouchEvent) => {
+            if (e.touches && e.touches[0]) {
+                setMousePosition({
+                    x: e.touches[0].clientX,
+                    y: e.touches[0].clientY
+                });
+            }
+        };
+
         window.addEventListener('mousemove', mouseMove);
-        return () => window.removeEventListener('mousemove', mouseMove);
+        window.addEventListener('touchmove', touchMove);
+        return () => {
+            window.removeEventListener('mousemove', mouseMove);
+            window.removeEventListener('touchmove', touchMove);
+        };
     }, []);
 
     useEffect(() => {
@@ -54,7 +67,7 @@ const CustomCursor: React.FC = () => {
 
     return (
         <motion.div
-            className="fixed top-0 left-0 w-6 h-6 rounded-full border-2 border-black dark:border-white pointer-events-none z-[9999] hidden lg:block transition-colors duration-300"
+            className="fixed top-0 left-0 w-6 h-6 rounded-full border-2 border-black dark:border-white pointer-events-none z-[9999] block lg:hidden transition-colors duration-300"
             variants={variants}
             animate={cursorVariant}
             transition={{ type: 'spring', damping: 25, stiffness: 250, mass: 0.5 }}

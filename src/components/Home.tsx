@@ -69,7 +69,7 @@ const Home: React.FC = () => {
                             initial={{ opacity: 0, scale: 0.9, y: 20 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                            className="relative w-full max-w-2xl bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] dark:shadow-[20px_20px_0px_0px_rgba(255,255,255,0.1)] overflow-hidden flex flex-col max-h-[90vh]"
+                            className="relative w-full max-w-2xl bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-2xl sm:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] sm:dark:shadow-[20px_20px_0px_0px_rgba(255,255,255,0.1)] overflow-hidden flex flex-col max-h-[90vh]"
                         >
                             {/* Modal Header */}
                             <div className="p-6 border-b border-black/5 dark:border-white/5 flex justify-between items-center bg-gray-50 dark:bg-white/5">

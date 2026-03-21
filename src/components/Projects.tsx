@@ -28,7 +28,7 @@ const Projects: React.FC = () => {
                         key={tab}
                         onClick={() => setActiveTab(tab)}
                         className={`px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold border-2 transition-all duration-300 ${activeTab === tab
-                            ? 'bg-black text-white border-black dark:bg-white dark:text-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.1)]'
+                            ? 'bg-black text-white border-black dark:bg-white dark:text-black dark:border-white shadow-lg sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.1)]'
                             : 'bg-white dark:bg-transparent text-black dark:text-white border-black/10 dark:border-white/10 hover:border-black dark:hover:border-white'
                             }`}
                     >

@@ -26,7 +26,7 @@ const Credentials: React.FC = () => {
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5 }}
-                            className="text-left w-full p-6 sm:p-8 bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] transition-all group cursor-pointer"
+                            className="text-left w-full p-6 sm:p-8 bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-lg sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] sm:dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] sm:hover:translate-x-[2px] sm:hover:translate-y-[2px] sm:hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] transition-all group cursor-pointer"
                         >
                             <div className="flex justify-between items-center mb-6">
                                 <div className="flex items-center gap-4 text-black dark:text-white">
@@ -55,7 +55,7 @@ const Credentials: React.FC = () => {
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
-                            className="text-left w-full p-6 sm:p-8 bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] transition-all group cursor-pointer"
+                            className="text-left w-full p-6 sm:p-8 bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-lg sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] sm:dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] sm:hover:translate-x-[2px] sm:hover:translate-y-[2px] sm:hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] transition-all group cursor-pointer"
                         >
                             <div className="flex justify-between items-center mb-6">
                                 <div className="flex items-center gap-4 text-black dark:text-white">
@@ -109,7 +109,7 @@ const Credentials: React.FC = () => {
                             initial={{ opacity: 0, scale: 0.9, y: 20 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                            className="relative w-full max-w-lg bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] sm:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] dark:shadow-[12px_12px_0px_0px_rgba(255,255,255,0.1)] sm:dark:shadow-[16px_16px_0px_0px_rgba(255,255,255,0.1)] overflow-hidden"
+                            className="relative w-full max-w-lg bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-2xl sm:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] sm:dark:shadow-[16px_16px_0px_0px_rgba(255,255,255,0.1)] overflow-hidden"
                         >
                             <div className="p-6 border-b border-black/5 dark:border-white/5 flex justify-between items-center bg-gray-50 dark:bg-white/5">
                                 <div className="flex items-center gap-3 text-black dark:text-white">

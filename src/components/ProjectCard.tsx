@@ -82,7 +82,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                             initial={{ opacity: 0, scale: 0.95, y: 30 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.95, y: 30 }}
-                            className="relative w-full max-w-6xl bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-[2rem] shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] dark:shadow-[20px_20px_0px_0px_rgba(255,255,255,0.05)] overflow-hidden flex flex-col max-h-[90vh]"
+                            className="relative w-full max-w-6xl bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-[2rem] shadow-2xl sm:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] sm:dark:shadow-[20px_20px_0px_0px_rgba(255,255,255,0.05)] overflow-hidden flex flex-col max-h-[90vh]"
                         >
                             {/* Modal Header */}
                             <div className="p-8 border-b border-black/5 dark:border-white/5 flex justify-between items-center bg-gray-50 dark:bg-white/5">

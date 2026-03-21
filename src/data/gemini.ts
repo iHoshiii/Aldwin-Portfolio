@@ -69,19 +69,19 @@ export const getChatResponse = async (userMessage: string, history: any[]) => {
                 const result = await fallbackModel.generateContent(userMessage);
                 return result.response.text();
             } catch (fallbackError: any) {
-                return `Connection Error (404): The models are not accessible with this key. Please ensure you created your key at aistudio.google.com and NOT the Google Cloud Console. Or, your region might have restricted access to Gemini 1.5.`;
+                return `Chatbot unavailable. Please contact Aldwin through his "Contacts".`;
             }
         }
 
         if (errorMessage.includes("API key not valid")) {
-            return "Connection Error: Your Gemini API Key is invalid. Please get a new one from Google AI Studio and update your .env file.";
+            return `Chatbot unavailable. Please contact Aldwin through his "Contacts".`;
         }
 
         if (errorMessage.includes("quota")) {
-            return "Connection Error: You've reached the free tier quota. Please wait a bit or upgrade.";
+            return `Chatbot unavailable. Please contact Aldwin through his "Contacts".`;
         }
 
         // Return the actual error for easier debugging if it's not standard
-        return `I'm sorry, I'm having a bit of trouble connecting (${errorMessage}). Feel free to reach out via email!`;
+        return `Chatbot unavailable. Please contact Aldwin through his "Contacts".`;
     }
 };

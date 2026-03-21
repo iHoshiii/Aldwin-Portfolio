@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY?.trim();
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 const SYSTEM_PROMPT = `You are Aldwin Bernard V. Loreto, speaking as the AI version of yourself on your portfolio website.
@@ -24,7 +24,7 @@ Instructions:
 - If you don't know something specifically about Aldwin's life outside of this context, stay in character but be humble.`;
 
 const model = genAI.getGenerativeModel({
-    model: "gemini-1.5-flash",
+    model: "gemini-1.5-flash-latest",
     systemInstruction: SYSTEM_PROMPT,
 });
 
@@ -59,9 +59,19 @@ export const getChatResponse = async (userMessage: string, history: any[]) => {
         return text;
     } catch (error: any) {
         console.error("FULL GEMINI ERROR LOG:", error);
-
-        // More robust error checking
         const errorMessage = error.message || error.toString() || "";
+
+        // Fallback Logic: If 1.5-flash is not found, try gemini-pro (1.0)
+        if (errorMessage.includes("404") || errorMessage.includes("not found")) {
+            console.warn("Attempting fallback to gemini-pro...");
+            try {
+                const fallbackModel = genAI.getGenerativeModel({ model: "gemini-pro" });
+                const result = await fallbackModel.generateContent(userMessage);
+                return result.response.text();
+            } catch (fallbackError: any) {
+                return `Connection Error (404): The models are not accessible with this key. Please ensure you created your key at aistudio.google.com and NOT the Google Cloud Console. Or, your region might have restricted access to Gemini 1.5.`;
+            }
+        }
 
         if (errorMessage.includes("API key not valid")) {
             return "Connection Error: Your Gemini API Key is invalid. Please get a new one from Google AI Studio and update your .env file.";

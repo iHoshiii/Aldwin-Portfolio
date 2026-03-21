@@ -37,13 +37,17 @@ export const getChatResponse = async (userMessage: string, history: any[]) => {
 
         console.log("Connecting to Gemini AI...");
 
+        // FIX: The first message in Gemini 'startChat' history MUST be 'user'.
+        // Any initial messages from the 'model' are filtered out from the API history.
+        const validHistory = history.map(h => ({
+            role: h.role,
+            parts: [{ text: h.parts[0].text }]
+        })).filter((h, idx) => idx > 0 || h.role === 'user');
+
         let chat = model.startChat({
-            history: history.map(h => ({
-                role: h.role,
-                parts: [{ text: h.parts[0].text }]
-            })),
+            history: validHistory,
             generationConfig: {
-                maxOutputTokens: 500,
+                maxOutputTokens: 600,
             },
         });
 
@@ -56,10 +60,18 @@ export const getChatResponse = async (userMessage: string, history: any[]) => {
     } catch (error: any) {
         console.error("FULL GEMINI ERROR LOG:", error);
 
-        if (error.message?.includes("API key not valid")) {
-            return "Connection Error: Your Gemini API Key is invalid. Please get a new one from Google AI Studio.";
+        // More robust error checking
+        const errorMessage = error.message || error.toString() || "";
+
+        if (errorMessage.includes("API key not valid")) {
+            return "Connection Error: Your Gemini API Key is invalid. Please get a new one from Google AI Studio and update your .env file.";
         }
 
-        return "I'm sorry, I'm having a bit of trouble connecting right now. Feel free to reach out via email!";
+        if (errorMessage.includes("quota")) {
+            return "Connection Error: You've reached the free tier quota. Please wait a bit or upgrade.";
+        }
+
+        // Return the actual error for easier debugging if it's not standard
+        return `I'm sorry, I'm having a bit of trouble connecting (${errorMessage}). Feel free to reach out via email!`;
     }
 };

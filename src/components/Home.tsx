@@ -43,8 +43,9 @@ const Home: React.FC = () => {
             </motion.p>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
+                className="flex flex-col items-center gap-10"
             >
                 <button
                     onClick={() => setIsAboutOpen(true)}
@@ -52,6 +53,24 @@ const Home: React.FC = () => {
                 >
                     More About me
                 </button>
+
+                {/* Quick Stats Bar */}
+                <div className="flex flex-wrap justify-center gap-6 md:gap-12 mt-4 text-black dark:text-white">
+                    <div className="flex flex-col items-center">
+                        <span className="text-3xl md:text-4xl font-bold font-outfit">2+</span>
+                        <span className="text-xs uppercase tracking-widest text-black/50 dark:text-white/50 font-bold">Years Coding</span>
+                    </div>
+                    <div className="w-px h-12 bg-black/10 dark:bg-white/10 hidden md:block"></div>
+                    <div className="flex flex-col items-center">
+                        <span className="text-3xl md:text-4xl font-bold font-outfit">10+</span>
+                        <span className="text-xs uppercase tracking-widest text-black/50 dark:text-white/50 font-bold">Projects Done</span>
+                    </div>
+                    <div className="w-px h-12 bg-black/10 dark:bg-white/10 hidden md:block"></div>
+                    <div className="flex flex-col items-center">
+                        <span className="text-3xl md:text-4xl font-bold font-outfit">6+</span>
+                        <span className="text-xs uppercase tracking-widest text-black/50 dark:text-white/50 font-bold">Tech Stack</span>
+                    </div>
+                </div>
             </motion.div>
 
             {/* About Me Modal */}

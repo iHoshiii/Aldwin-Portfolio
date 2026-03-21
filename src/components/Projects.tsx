@@ -41,14 +41,26 @@ const Projects: React.FC = () => {
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={activeTab}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.5 }}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        variants={{
+                            visible: { transition: { staggerChildren: 0.1 } },
+                            hidden: {},
+                            exit: { opacity: 0, y: -20, transition: { duration: 0.3 } }
+                        }}
                         className={`grid gap-12 ${filteredProjects.length === 1 ? 'grid-cols-1 max-w-2xl mx-auto' : 'grid-cols-1 md:grid-cols-2'}`}
                     >
                         {filteredProjects.map((project, index) => (
-                            <ProjectCard key={project.id} project={project} index={index} />
+                            <motion.div
+                                key={project.id}
+                                variants={{
+                                    hidden: { opacity: 0, y: 20 },
+                                    visible: { opacity: 1, y: 0 }
+                                }}
+                            >
+                                <ProjectCard project={project} index={index} />
+                            </motion.div>
                         ))}
                     </motion.div>
                 </AnimatePresence>

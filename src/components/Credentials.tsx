@@ -19,12 +19,23 @@ const Credentials: React.FC = () => {
                         My Credentials<span className="text-black/50 dark:text-white/50"></span>
                     </motion.h2>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={{
+                            visible: { transition: { staggerChildren: 0.2 } },
+                            hidden: {}
+                        }}
+                        className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8"
+                    >
                         {/* Education Card */}
                         <motion.button
                             onClick={() => setIsEduModalOpen(true)}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
+                            variants={{
+                                hidden: { opacity: 0, scale: 0.9, y: 30 },
+                                visible: { opacity: 1, scale: 1, y: 0 }
+                            }}
                             transition={{ duration: 0.5 }}
                             className="text-left w-full p-6 sm:p-8 bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-lg sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] sm:dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] sm:hover:translate-x-[2px] sm:hover:translate-y-[2px] sm:hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] transition-all group cursor-pointer"
                         >
@@ -52,9 +63,11 @@ const Credentials: React.FC = () => {
                         {/* Goals Card */}
                         <motion.button
                             onClick={() => setIsGoalsModalOpen(true)}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5, delay: 0.1 }}
+                            variants={{
+                                hidden: { opacity: 0, scale: 0.9, y: 30 },
+                                visible: { opacity: 1, scale: 1, y: 0 }
+                            }}
+                            transition={{ duration: 0.5 }}
                             className="text-left w-full p-6 sm:p-8 bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-lg sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] sm:dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] sm:hover:translate-x-[2px] sm:hover:translate-y-[2px] sm:hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] transition-all group cursor-pointer"
                         >
                             <div className="flex justify-between items-center mb-6">
@@ -77,7 +90,7 @@ const Credentials: React.FC = () => {
                                 </p>
                             </div>
                         </motion.button>
-                    </div>
+                    </motion.div>
 
                     {/* Brief Note */}
                     <motion.div
@@ -217,7 +230,7 @@ const Credentials: React.FC = () => {
                     </div>
                 )}
             </AnimatePresence>
-        </section>
+        </section >
     );
 };
 

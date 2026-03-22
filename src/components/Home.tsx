@@ -73,7 +73,7 @@ const Home: React.FC = () => {
                 </div>
             </motion.div>
 
-            {/* About Me Modal */}
+            {/* About Me */}
             <AnimatePresence>
                 {isAboutOpen && (
                     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6">
@@ -90,7 +90,7 @@ const Home: React.FC = () => {
                             exit={{ opacity: 0, scale: 0.9, y: 20 }}
                             className="relative w-full max-w-2xl bg-white dark:bg-[#0a0a0a] border-2 border-black dark:border-white rounded-3xl shadow-2xl sm:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] sm:dark:shadow-[20px_20px_0px_0px_rgba(255,255,255,0.1)] overflow-hidden flex flex-col max-h-[90vh]"
                         >
-                            {/* Modal Header */}
+                            {/* Header */}
                             <div className="p-6 border-b border-black/5 dark:border-white/5 flex justify-between items-center bg-gray-50 dark:bg-white/5">
                                 <h2 className="text-2xl font-bold font-outfit text-black dark:text-white">About Aldwin</h2>
                                 <button
@@ -101,7 +101,7 @@ const Home: React.FC = () => {
                                 </button>
                             </div>
 
-                            {/* Modal Content */}
+                            {/* Content */}
                             <div className="p-8 overflow-y-auto space-y-12">
                                 {/* Philosophy Section */}
                                 <section className="text-center px-4">

@@ -107,7 +107,7 @@ const Credentials: React.FC = () => {
                 </div>
             </div>
 
-            {/* Education Details Modal */}
+            {/* Education Details */}
             <AnimatePresence>
                 {isEduModalOpen && (
                     <div className="fixed inset-0 z-[110] flex items-center justify-center p-4">
